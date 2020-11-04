@@ -1,0 +1,79 @@
+
+/* Colour scheme. */
+
+:root {
+  --clr-purple: #6F4A8E;
+  --clr-blue: #165BAA;
+  --clr-dark-grey: #555;
+  --clr-light-grey: #EEE;
+  --clr-purple-bright: #A155B9;
+  --clr-hot-pink: #B83B5E;
+  --clr-coral: #FFA4B6;
+
+  --clr-teal: #28abb9;
+  --clr-light-blue: #00bcd4;
+  --clr-green: #03c4a1;
+  --clr-orange: #f08a5d;
+  --clr-brown-grey: #625261;
+  --clr-pink: #e6739f;
+  --clr-lime: #9ad3bc;
+  --clr-dark-brown: #321f28;
+
+}
+
+
+
+.TripContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+}
+
+.TripCard {
+  float: left;
+  margin: 6px;
+  background: whitesmoke;
+  height: 470px;
+  width: 300px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1 px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+
+}
+
+.TripDetails {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.TripDetails a:hover {
+  color: var(--clr-dark-grey);
+}
+
+.TripCard:hover {
+ 
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+.TripImage {
+  width: 96%;
+  height: 300px;
+  padding: 3px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+h3 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
