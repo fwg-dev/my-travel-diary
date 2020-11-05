@@ -21,7 +21,14 @@
 
 }
 
-
+/* Reset annoying defaults. */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 .TripContainer {
   display: flex;
@@ -63,7 +70,7 @@
 
 
 .TripImage {
-  width: 96%;
+  width: 89%;
   height: 300px;
   padding: 3px;
   display: inline-block;
@@ -76,4 +83,10 @@ h3 {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+
+h5 {
+  margin-top: 10px;
+
+
 }
