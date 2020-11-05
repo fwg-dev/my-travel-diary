@@ -1,31 +1,34 @@
 import React, { Component } from 'react'; 
-import './App.css'
 import Trips from './Trips.js';
+// import Navbar from './components/Navbar'
+import './App.css'
 
-const API_URL = process.env.REACT_APP_API_URL;
 
-class App extends Component {
-
-   constructor(props) {
-     super(props)
-
-     this.state = {
-       trips: []
-     }
-   }
-  //  debugger;
-   componentDidMount() {
-     fetch(`${API_URL}/trips`)
-       .then(response => response.json())
-       .then(trips => this.setState({ trips }))
-   }
-  
-   
+class App extends Component { 
   render() {
     return (
+
+      
+
       <div className="App"> 
-        <Trips trips={ this.state.trips } />
+        <div className="App-header">
+          <div className="topnav">
+            <p>THE VAULT </p>
+          </div>
+          
+          <div className="topnav-right">
+            <p>PROFILE</p>
+            <p>LOG OUT</p>
+          </div>
+          
+        </div>
+
+
+      
+        <Trips />
       </div>
+      
+      
     );
   }
 }
