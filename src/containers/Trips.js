@@ -1,19 +1,33 @@
-import React from 'react'; 
+import React, { Component } from 'react'; 
+import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+import TripCard from '../components/TripCard';
+import TripForm from './TripForm'; 
+import { getTrips } from '../actions/trips';
 import './Trips.css';
 
-const Trips = (props) => 
-<div className="TripContainer">
-  <h1>Trip</h1>
-  {props.trips.map(trip => 
-  <div className="TripDetails">
-     <div key={trip.id} className="TripCard">
-        <h3>{trip.title}</h3>
-        <h5>{trip.city}, {trip.country}</h5>
-        <h5>{trip.date_of_trip} </h5>
-     </div>
-  </div>
+class  Trips extends Component {
 
-    )}
-</div>;
+   componentDidMount() {
+      this.props.getTrips()
+   }
 
-export default Trips; 
+     render(){
+      return(
+      <div className="TripContainer">
+            {this.props.trips.map(trip => <TripCard key={trip.id} trip={trip} />)}
+            <TripForm />
+      </div>
+   );
+
+   }
+
+}
+
+const mapStateToProps = (state) => {
+   return({ 
+      trips: state.trips
+   })
+}
+
+export default connect(mapStateToProps, { getTrips } )(Trips); 
