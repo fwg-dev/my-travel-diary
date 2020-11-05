@@ -93,3 +93,57 @@ trip_picture: "https://images.unsplash.com/flagged/photo-1579005433035-fa39d94b4
   </div>
 
 ---
+
+// Redux Store- collection of trips
+var store = {
+trips:[
+{...}
+
+],
+tripFormData: [
+{
+title: '',
+city: '',
+country: '',
+date_of_trip: '',
+}
+],
+
+currentTrip: {
+//this will select a specific trip = /trip/:id
+
+}
+
+}
+
+---
+
+## // we user thunk to make asynch calls to our backend
+
+---
+
+this is info about the surfboards before we moved everything to redux
+
+constructor(props) {
+super(props)
+
+     this.state = {
+       trips: []
+     }
+
+}
+
+---
+
+// import React from 'react'
+
+// const Navbar => () =>
+// <div>
+
+// </div>
+
+## // export default Navbar
+
+---
+
+<a href="#NewForm">Add Trip</a>
