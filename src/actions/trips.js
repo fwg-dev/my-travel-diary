@@ -4,8 +4,6 @@ import { resetTripForm } from './tripForm';
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-
-
 //  Action creators **
 const setTrips = trips => {
   return {
@@ -34,6 +32,7 @@ export const getTrips = () => {
 }
 
 export const createTrip = trip => {
+  debugger;
   return dispatch => {
     return fetch(`${API_URL}/trips`,{
       method: "POST", 
@@ -45,8 +44,8 @@ export const createTrip = trip => {
 
     .then(response => response.json())
     .then(trip => {
-      dispatch(addTrip(trip))
-      dispatch(resetTripForm())
+      debugger
+      // dispatch(resetTripForm())
   
     })
     .catch(error => console.log(error))
