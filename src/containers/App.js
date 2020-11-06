@@ -1,10 +1,28 @@
 import React, { Component } from 'react'; 
-import Trips from './Trips.js';
+import Trips from './Trips';
 // import Navbar from './components/Navbar'
-import './App.css'
+import './App.css';
 
 
-class App extends Component { 
+class App extends React.Component { 
+
+  // componentDidMount() {
+  //   fetch('http://localhost:3001/api/vi/users',{
+  //     method: 'GET'
+  //   })
+  //   .then(res => res.json())
+  //   .then(data => console.log(data))
+
+
+  // }
+      
+
+
+
+
+
+
+
   render() {
     return (
 
