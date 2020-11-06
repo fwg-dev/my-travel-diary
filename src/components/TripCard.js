@@ -8,6 +8,7 @@ const TripCard = ({ trip }) => (
         <h3>{trip.title}</h3>
         <h5>{trip.city}, {trip.country}</h5>
         <h5>{trip.date_of_trip} </h5>
+        {/* <h5>{trip.user_id} </h5> */}
      </div>
   </div>
 )
