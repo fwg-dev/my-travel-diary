@@ -147,3 +147,37 @@ super(props)
 ---
 
 <a href="#NewForm">Add Trip</a>
+
+---
+
+<div>
+          <p>
+          { user? 
+                `${user.username} is logged in` :  "No one is logged" 
+          }
+
+          </p>
+                      <Trips />
+
+            <button onClick={login}> Log in </button>
+
+      </div>
+
+    );
+
+}
+
+---
+
+  <div>
+            <label htmlFor="user_id">Pick a user: </label>
+            <select
+            <option value="select">Select</option>
+              <option value="select">Faith</option>
+              
+              
+              onChange ={this.handleOnChange}
+                name="user_id"
+                value={user_id}
+                />
+          </div>
