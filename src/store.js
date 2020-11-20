@@ -5,17 +5,18 @@ import {
   compose
 } from 'redux';
 import thunk from 'redux-thunk';
-
+//Import Reducers 
 import trips from './reducers/trips';
 import tripFormData from './reducers/tripFormData'; 
+
 
 const composeEnhancer = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 
 const reducers = combineReducers ({
   trips, 
-  tripFormData
-
+  tripFormData, 
+  
 });
 
 const store = createStore(
@@ -24,3 +25,5 @@ const store = createStore(
 );
 
 export default store
+
+// thunk - 
