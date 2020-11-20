@@ -6,7 +6,7 @@ import './index.css';
 import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 import store from './store.js';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
@@ -14,9 +14,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 ReactDOM.render(
   // <React.StrictMode>
   <Provider store={store}>
-   <Router>
+   <BrowserRouter>
      <App/>
-   </Router>
+   </BrowserRouter>
     </Provider>,
   // </React.StrictMode>,
   document.getElementById('root')
