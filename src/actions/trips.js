@@ -1,6 +1,5 @@
 // const { default: trips } = require("../reducers/trips");
-
-import { resetTripForm } from './tripForm'; 
+// import { resetTripForm } from './tripForm'; 
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -20,7 +19,7 @@ const addTrip = trip => {
   }
 }
 
-// Asynch Actions **
+// Async Actions **
 export const getTrips = () => {
   return dispatch => {
    return fetch(`${API_URL}/trips`)
@@ -30,24 +29,23 @@ export const getTrips = () => {
 
   }
 }
-
+//without thunk, we cannot use our dispatch inside the function 
+//dispatch updates the redux store 
+//dispatch(setTrips(trips))) - we are using this to dispatch our action  
+//vid 5 38:27
 export const createTrip = trip => {
-  debugger;
+  // debugger;
   return dispatch => {
     return fetch(`${API_URL}/trips`,{
       method: "POST", 
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ trip: trip })
+      body: JSON.stringify(trip)
     })
 
     .then(response => response.json())
-    .then(trip => {
-      debugger
-      // dispatch(resetTripForm())
-  
-    })
+    .then(trip => dispatch(addTrip(trip)))
     .catch(error => console.log(error))
   }
 
