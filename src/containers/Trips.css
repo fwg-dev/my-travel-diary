@@ -52,6 +52,16 @@
   position: relative;
   border-radius: 5px;
 
+  
+}
+a {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-decoration: none;
+
 }
 
 .TripDetails {
@@ -65,7 +75,7 @@
 
 .TripCard:hover {
  
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 18px 30px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 
@@ -75,6 +85,7 @@
   padding: 3px;
   display: inline-block;
   white-space: nowrap;
+
 }
 
 h3 {
@@ -87,6 +98,22 @@ h3 {
 
 h5 {
   margin-top: 10px;
+}
 
+.Trash {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  z-index: 100;
+  color: white;
+  background-color: #fac9dc; 
+}
 
+.Edit{
+  position: absolute;
+  bottom: 2px;
+  /* right: 6px; */
+  z-index: 100;
+  color: white;
+  background-color: #fac9dc; 
 }
