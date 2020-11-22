@@ -22,7 +22,7 @@ class  Trips extends Component {
 
      <div>
           <Switch>
-
+           
            <Route  path='/trips/:id' render={(routerProps) => <TripDetail {...routerProps} trips={this.props.trips}/>}/>
            console.log()
            <Route path='/trips' render={(routerProps) => <TripComp {...routerProps} trips={this.props.trips}/>}/> 
