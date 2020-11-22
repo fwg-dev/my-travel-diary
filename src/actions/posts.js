@@ -18,4 +18,14 @@ export const addPost = (post, tripId) => {
     }
 
   }
-  
+export const deletePost = (postId, tripId) => {
+  return (dispatch) => {
+    return fetch(`http://localhost:3001/api/v1/trips/${tripId}/posts/${postId}`, {
+      method: 'DELETE'
+  })
+  .then(response => response.json())
+  .then(trip => dispatch({type: 'DELETE_POST', payload: trip}))
+
+}
+
+}
