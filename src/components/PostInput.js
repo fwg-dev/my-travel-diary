@@ -1,23 +1,53 @@
 import React from 'react'; 
+import { connect } from 'react-redux'; 
+//import actions
+import { addPost } from '../actions/posts'; 
 
 //Import css
 import styled from 'styled-components'
 
-
-
 class PostInput extends React.Component {
+
+  state = {
+    heading: "",
+    description: "", 
+    img: ""
+
+  }
+
+  handleChange = (event) => {
+    // debugger; 
+    this.setState({
+      [event.target.name]: event.target.value
+      //
+    })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.addPost(this.state, this.props.trip.id)
+    // debugger; 
+    this.setState({
+      heading: '',
+      description: '',
+      img: '',
+  
+    })
+  }
 
 
   render(){
     return (
-  <PostInputContainerStyle>
+  <PostInputContainerStyle  onSubmit={this.handleSubmit}>
 
-      <DescriptionStyle>
+      <DescriptionStyle >
           <div>
             <label htmlFor="heading">Heading: </label>
             <input 
-            type="text"     
+            type="text"  
+            onChange={this.handleChange}   
             name="heading" 
+            value={this.state.heading}
             /> 
           </div>
 
@@ -25,18 +55,26 @@ class PostInput extends React.Component {
             <label htmlFor="description">description: </label>
             <textarea placeholder="Please write your post here"
             type="text"     
+            onChange={this.handleChange}
             name="description" 
+            value={this.state.description}
             /> 
           </div>
+
           <div>
             <label htmlFor="img">Upload Image: </label>
             <input 
             type="text"
-            name="img"              
+            onChange={this.handleChange}
+            name="img"
+            value={this.state.img}           
             />
            </div>
-          <button className="AddPost" type="submit"> Add a Post </button>
-       
+          <div>
+          <button type="submit" className="AddPost" type="submit">Add Post </button>
+            
+          </div>
+
       </DescriptionStyle>
    </PostInputContainerStyle>
     )
@@ -45,7 +83,7 @@ class PostInput extends React.Component {
 
 }
 
-const DescriptionStyle = styled.div`
+const DescriptionStyle = styled.form`
 margin: 5rem 0rem;
 label{
   text-transform: uppercase;
@@ -66,15 +104,13 @@ input{
    height: 35px;
 }
 button {
-  background-color: #dbd7d2;
-  border: none;
+  width: 35%;
+  background-color: #a9a7a4;
   color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 12px 1px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -84,11 +120,10 @@ const PostInputContainerStyle = styled.div`
   width: 80%;
   border-radius: 1rem;
   padding: 2rem 5rem;
-  background: white;
   position: absolute;
   left: 10%;
   color: black;
   z-index: 10;
 `;  
 
-export default PostInput; 
+export default connect(null, {addPost})(PostInput); 
