@@ -5,6 +5,8 @@ import Home from '../pages/Home';
 import Profile from '../pages/Profile'; 
 import PersonalTrips from '../pages/PersonalTrips'
 import TripDetail from '../components/TripDetail'
+import Trips from './Trips'
+
 
 //Router 
 import { Route, Switch } from 'react-router-dom'; 
@@ -14,27 +16,25 @@ import { Route, Switch } from 'react-router-dom';
 class App extends React.Component { 
      
   render() {
+    const { trips } = this.props
     return (
 
       <div> 
           <Nav />
           <Switch >
-          <Route path="/" exact>
+          <Route exact path="/" >
              <Home /> 
           </Route>
-          <Route path="/profile"  exact>
-            <Profile />
+          <Route exact={true}path="/trips" >
+            {/* <Trips /> */}
           </Route>
-          <Route path="/trips"  exact>
-            <PersonalTrips/>
+          <Route exact path="/logout"  >
+            {/* <PersonalTrips/> */}
           </Route> 
-          <Route path="/trips/:id" exact>
-
-             <TripDetail />
-          </Route>
-         
-
+          
           </Switch>
+
+          <Trips/>
          
       </div>
       
