@@ -26,7 +26,7 @@ return(
     </UserBiography>
 
     <hr/>
-    {/* <AddTrip><a href="#AddTrip">Add Trip</a></AddTrip> */}
+
 </Main>
 
 
@@ -118,23 +118,5 @@ const UserBiography = styled.div`
   font-family: "varela round", sans-serif;
 `;
 
-const AddTrip = styled.button`
-.AddTrip{
-  outline:none;
-  height: 40px;
-  text-align: center;
-  width: 130px;
-  border-radius:40px;
-  background: #fff;
-  border: 2px solid $green;
-  color:$green;
-  letter-spacing:1px;
-  text-shadow:0; 
-  a{
-    text-decoration: none;
-    color: brown;
-}
-
-`; 
 
 export default User; 
