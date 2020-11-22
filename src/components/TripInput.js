@@ -100,7 +100,7 @@ class TripInput extends React.Component {
                    />
               </div>
 
-            <button className="AddTrip" type="submit">Add Trip</button>
+            <button className="AddTrip" type="submit">Add Trip /</button>
         </form>
       </div>
   </div>
