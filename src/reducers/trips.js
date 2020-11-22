@@ -1,6 +1,5 @@
 
 export default (state = [], action) => {
-debugger; 
   switch(action.type) {
     case 'GET_TRIPS_SUCCESS':
       return action.trips; 
@@ -17,6 +16,15 @@ debugger;
         })
         return {...state, trips}
 
+        case 'DELETE_POST':
+        let tripsTwo = state.trips.map(trip =>{
+          if (trip.id === action.payload.id) {
+             return action.payload
+          }else {
+            return trip
+          }
+        })
+        return {...state, trips}
       default: 
       return state; 
   }
