@@ -1,9 +1,8 @@
 import React, { Component } from 'react'; 
 import { connect } from 'react-redux';
 
-import TripCard from '../components/TripCard';
-
-
+import TripDetail from '../components/TripDetail'; 
+import TripComp from '../components/TripComp'
 
 import { getTrips } from '../actions/trips';
 import TripInput from '../components/TripInput'; 
@@ -11,7 +10,8 @@ import TripInput from '../components/TripInput';
 import { Route, Switch } from 'react-router-dom'; 
 //import style 
 // import styled from 'styled-components'
-import './Trips.css';class  Trips extends Component {
+import './Trips.css';import TripsComp from '../components/TripComp';
+class  Trips extends Component {
 
    componentDidMount() {
       this.props.getTrips()
@@ -21,13 +21,18 @@ import './Trips.css';class  Trips extends Component {
       return(
 
      <div>
-     
-     {/* <TripInput /> */}
-      <div className="TripContainer"> 
-      <TripInput />
-         {this.props.trips.map(trip => <TripCard key={trip.id} trip={trip} />)} 
-      </div>
+          <Switch>
+
+           <Route  path='/trips/:id' render={(routerProps) => <TripDetail {...routerProps} trips={this.props.trips}/>}/>
+           console.log()
+           <Route path='/trips' render={(routerProps) => <TripComp {...routerProps} trips={this.props.trips}/>}/> 
+
+       </Switch>
+
+
      </div>
+     
+     
 
       );
     
@@ -36,7 +41,7 @@ import './Trips.css';class  Trips extends Component {
 
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
    return({ 
       trips: state.trips
    })
