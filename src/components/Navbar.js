@@ -10,20 +10,21 @@ class  Navbar extends  React.Component  {
   render (){
       return(
         <StyledNav> 
-          <Link to="/"> <a id="logo" href="#home">CAPTURE</a>
+          <Link to="/"> 
+          CAPTURE
           </Link>
       <ul> 
      
         <li>
-          <Link to="/profile" exact>
-            <a href="#Profile">PROFILE</a>
+          <Link to="/trips" exact>
+         TRIPS
           </Link>
         </li>
 
       
         <li>
           <Link to="logout" exact>
-            <a href="#logout">LOG OUT</a>
+          LOG OUT
           </Link>
         </li>
 
