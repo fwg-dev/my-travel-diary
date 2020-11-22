@@ -1,7 +1,7 @@
 import React from 'react'
 import User from '../components/User'; 
 // import Trips from '../containers/Trips'; 
-import TripInput from '../components/TripInput';
+
 import Trips from '../containers/Trips'; 
 
 
@@ -14,10 +14,10 @@ const Profile = () => {
 
     return(
       <UserProfile>
-        <User/>
+
         <TripsStyle>
 
-          <Trips/>
+          {/* <Trips/> */}
         </TripsStyle>
   
         
