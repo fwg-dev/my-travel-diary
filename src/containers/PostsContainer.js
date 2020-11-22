@@ -7,12 +7,14 @@ class PostsContainer extends React.Component {
 
   render(){
     return(
-
       <div>
-        <PostInput />
-        <Posts />
+           <div>
+          <Posts posts={this.props.trip && this.props.trip.posts} />
+        </div>
+        <div>
+          <PostInput trip={this.props.trip} />
+        </div>
       </div>
-
 
     )
 
