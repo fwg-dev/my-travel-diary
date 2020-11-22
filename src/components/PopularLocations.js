@@ -12,7 +12,7 @@ const PopularLocations = () => {
       <LocationsContainer >
 
           <LocationsCard >
-          <img src="https://unsplash.it/500/504" alt="" />
+          <img src="https://unsplash.it/500/504" alt="PopularImage" />
                   <LocationDetails >
                       <a className="location-name" href="/#">Sydney, Australia</a>
                           <Tripcount> 1005 trips</Tripcount>
@@ -20,7 +20,7 @@ const PopularLocations = () => {
           </LocationsCard>
 
           <LocationsCard >
-          <img src="https://unsplash.it/500/505" alt="" />
+          <img src="https://unsplash.it/500/505" alt="PopularImage" />
                   <LocationDetails >
                       <a className="location-name" href="/#">New York, USA</a>
                           <Tripcount> 300 trips</Tripcount>
@@ -28,7 +28,7 @@ const PopularLocations = () => {
           </LocationsCard>
 
           <LocationsCard >
-              <img src="https://unsplash.it/500/506" alt="" />
+              <img src="https://unsplash.it/500/506" alt="PopularImage"  />
                   <LocationDetails >
                       <a className="location-name" href="/#">Barcelona, Spain</a>
                           <Tripcount> 2200 trips</Tripcount>
@@ -36,7 +36,7 @@ const PopularLocations = () => {
           </LocationsCard>
 
           <LocationsCard >
-             <img src="https://unsplash.it/500/507" alt="" />
+             <img src="https://unsplash.it/500/507" alt="PopularImage"  />
                   <LocationDetails >
                       <a className="location-name" href="/#">Nuuksio, Finland</a>
                           <Tripcount> 1700 trips</Tripcount>
@@ -44,7 +44,7 @@ const PopularLocations = () => {
           </LocationsCard>
 
           <LocationsCard >
-              <img src="https://unsplash.it/500/508" alt="" />
+              <img src="https://unsplash.it/500/508" alt="PopularImage"  />
                   <LocationDetails >
                       <a className="location-name" href="/#">South Island, New Zealand</a>
                       <Tripcount> 1000 trips </Tripcount>
@@ -52,7 +52,7 @@ const PopularLocations = () => {
           </LocationsCard>
 
           <LocationsCard >
-          <img src="https://unsplash.it/500/509" alt="" />
+          <img src="https://unsplash.it/500/509" alt="PopularImage"  />
                   <LocationDetails >
                       <a className="location-name" href="/#">Rome, Italy </a>
                           <Tripcount> 1005 trips</Tripcount> 
