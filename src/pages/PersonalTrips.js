@@ -4,8 +4,8 @@ import React from 'react'
 //Route
 // import { Route, Switch } from 'react-router-dom'; 
 //style
-import styled from 'styled-components'
-import Posts from '../containers/PostsContainer.js';
+// import styled from 'styled-components'
+// import Posts from '../containers/PostsContainer.js';
 
 
 const PersonalTrips = () => {
